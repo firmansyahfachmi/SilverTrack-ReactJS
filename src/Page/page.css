@@ -1,0 +1,24 @@
+.home {
+  background-color: #2a2d34;
+  width: 100%;
+  height: auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  justify-content: center;
+}
+
+.news {
+  background-color: #353943;
+  margin: auto;
+  height: 260px;
+}
+
+.cardContainer {
+  padding-top: 35px;
+  margin: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
+  align-items: flex-start;
+}

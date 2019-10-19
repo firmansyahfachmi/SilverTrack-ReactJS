@@ -1,0 +1,18 @@
+.gcard {
+  height: 250px;
+  margin: auto;
+  width: 185px;
+}
+
+.gimg {
+  height: 200px;
+  background-color: #353943;
+  margin: auto;
+  width: 185px;
+}
+
+.gtitle {
+  color: white;
+  text-align: center;
+  width: 100%;
+}

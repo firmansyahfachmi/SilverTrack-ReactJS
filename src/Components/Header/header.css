@@ -1,0 +1,20 @@
+.header {
+  background-color: #363a44;
+}
+
+.logo {
+  width: 200px;
+}
+
+.butRegister {
+  background-color: #30c5ff;
+  border: none;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 5px 20px 5px 20px;
+}
+
+.butRegister:hover {
+  background-color: #2ca2d1;
+  border: none;
+}
