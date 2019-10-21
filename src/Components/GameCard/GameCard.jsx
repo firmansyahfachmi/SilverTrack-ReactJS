@@ -1,18 +1,25 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 import "./gamecard.css";
 
-class GameCard extends Component {
-  render() {
-    return (
-      <Fragment>
+const GameCard = props => {
+  return (
+    <Fragment>
+      <Link to={"/" + props.data.slug} style={{ textDecoration: "none" }}>
         <div className="gcard">
-          <div className="gimg"></div>
-          <div className="gtitle">Game</div>
+          <div className="gimg">
+            <img
+              src={props.data.image}
+              alt={props.data.name}
+              className="catimage"
+            />
+          </div>
+          <div className="gtitle">{props.data.name}</div>
         </div>
-      </Fragment>
-    );
-  }
-}
+      </Link>
+    </Fragment>
+  );
+};
 
 export default GameCard;

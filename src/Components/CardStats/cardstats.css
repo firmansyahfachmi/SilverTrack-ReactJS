@@ -1,0 +1,23 @@
+.cardStats {
+  background-color: #242831;
+  width: 172px;
+  height: 100px;
+  margin: 0px 5px 0px 5px;
+}
+
+.cardTitle {
+  color: whitesmoke;
+  padding: 5px 8px 0px 8px;
+  font-size: 14px;
+}
+
+.cardValue {
+  color: #30c5ff;
+  margin: auto;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}

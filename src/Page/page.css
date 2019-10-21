@@ -1,7 +1,25 @@
 .home {
   background-color: #2a2d34;
   width: 100%;
+  min-height: 550px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  justify-content: center;
+}
+
+.login {
+  background-color: #2a2d34;
+  width: 100%;
   height: auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  justify-content: center;
+}
+
+.profile {
+  background-color: #2a2d34;
+  width: 100%;
+  height: 550px;
   padding-top: 35px;
   padding-bottom: 35px;
   justify-content: center;
@@ -14,11 +32,130 @@
 }
 
 .cardContainer {
-  padding-top: 35px;
+  padding-top: 20px;
   margin: auto;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 0;
   align-items: flex-start;
+}
+
+.modalContain {
+  height: auto;
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.title1 {
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+}
+.title2 {
+  color: grey;
+}
+
+.modalLogin {
+  background-color: #353943;
+  height: 350px;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+
+.inputLogin {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  margin-top: 40px;
+  color: whitesmoke;
+}
+
+.inputLogin:focus {
+  background-color: #50566430;
+  outline-color: transparent;
+  border-bottom-color: #30c5ff;
+}
+
+.butLogin {
+  margin: auto;
+  margin-top: 60px;
+  font-weight: 500;
+  background-color: #30c5ff;
+  border: none;
+  border-radius: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.butLogin:hover {
+  border: none;
+  background-color: #2ca2d1;
+}
+
+.modalRegister {
+  background-color: #353943;
+  height: auto;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.profileContainer {
+  height: auto;
+  margin: auto;
+  padding: 20px;
+}
+
+.profileTitle {
+  height: auto;
+  margin: auto;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.img {
+  height: 200px;
+  background-color: #353943;
+}
+
+.desc {
+  height: 200px;
+  margin-left: 20px;
+}
+
+.nameTitle {
+  color: silver;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.emailSub {
+  color: #656c80;
+}
+
+.logout {
+  height: auto;
+  margin: auto;
+  padding: 20px;
+}
+
+.logDiv {
+  background-color: #353943;
+  padding: 15px;
+}
+
+.loading {
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
