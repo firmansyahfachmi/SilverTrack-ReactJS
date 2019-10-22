@@ -1,6 +1,6 @@
-/* TRACKER CSGO STYLES ////////////////////////////////////////////////////////// */
+/* TRACKER APEX STYLES ////////////////////////////////////////////////////////// */
 
-.csgo {
+.apex {
   background-color: #2a2d34;
   width: 100%;
   min-height: 630px;
@@ -46,8 +46,8 @@
   background-color: #1e2129;
 }
 
-.statValueCS {
-  color: #a0dde6;
+.statValue {
+  color: whitesmoke;
   margin: auto;
   width: 100%;
   font-size: 22px;
@@ -59,8 +59,6 @@
 
 .botte {
   min-height: 250px;
-  /* background-color: #353943; */
-  margin-top: 20px;
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -94,8 +92,7 @@
   margin-top: 100px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
-.searchCsgo {
+.searchApex {
   background-color: #50566430;
   border: none;
   border-radius: 0px;
@@ -103,32 +100,27 @@
   color: whitesmoke;
 }
 
-.searchCsgo:focus {
+.searchApex:focus {
   background-color: #50566430;
-  border-bottom: 1px solid #30c5ff;
+  border-bottom: 1px solid #ed2828;
   outline-color: transparent;
 }
 
-.percent {
-  color: #30c5ff;
-  font-weight: 500;
-}
-
-.typeTitleCs {
+.typeTitleApex {
   font-weight: 600;
   color: whitesmoke;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 1px;
   display: flex;
   background-color: #50566430;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.dotCs {
-  background-color: #30c5ff;
+.dotApex {
+  background-color: #ed2828;
   width: 10px;
   height: 10px;
   border-radius: 50px;
 }
 
-/* TRACKER CSGO STYLES END ////////////////////////////////////////////////////////// */
+/* TRACKER APEX STYLES END ////////////////////////////////////////////////////////// */

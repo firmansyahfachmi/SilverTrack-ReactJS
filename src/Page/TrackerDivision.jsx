@@ -3,15 +3,15 @@ import { Row, Col, Spinner } from "react-bootstrap";
 
 import t from "typy";
 
-import "./trackercsgo.css";
+import "./trackerdivision.css";
 
 import { connect } from "react-redux";
-import { getCsgoPlayer } from "../Redux/Action/csgo";
+import { getDivisionPlayer } from "../Redux/Action/division";
 
 import CardStats from "../Components/CardStats/CardStats";
 import Character from "../Assets/character.png";
 
-class TrackerCSGO extends Component {
+class TrackerDivision extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,7 +33,7 @@ class TrackerCSGO extends Component {
     this.setState({ character: true });
     let search = this.state.search;
     this.props
-      .dispatch(getCsgoPlayer(search))
+      .dispatch(getDivisionPlayer(search))
       .then(() => {
         let data = { ...this.props.player.segments }[0];
         this.setState({
@@ -59,23 +59,23 @@ class TrackerCSGO extends Component {
       playerStats,
       character
     } = this.state;
-
     const data = Object.values(playerStats);
+
     return (
-      <div className="csgo">
+      <div className="division">
         <Row className="col-lg-10 m-auto tope">
           <Col className="col-lg-3">
             <img
-              src="http://www.requitix.io/mypics/max/9/92461_csgo-logo-png.png"
-              alt="CSGO Logo"
+              src="https://lordsofgaming.net/wp-content/uploads/2019/03/The-Division-2.png"
+              alt="DIVISION Logo"
               width="200px"
             />
           </Col>
           <Col className="col-lg-6">
             <input
               type="text"
-              placeholder="Search player"
-              className="searchCsgo col-lg-12"
+              placeholder="Search Player"
+              className="searchDivision col-lg-12"
               onChange={this.handleChange}
               onKeyPress={e => {
                 if (e.key === "Enter") {
@@ -110,50 +110,28 @@ class TrackerCSGO extends Component {
                   />
                 </div>
               </Col>
-              <Col className="col-lg-5 name p-0">
+              <Col className="col-lg-8 name p-0">
                 {t(playerPlatform, "platformUserHandle").safeObject}
               </Col>
               <Col className="cardMide p-0 mt-auto mb-auto">
                 <div className="statTitle">
-                  {t(playerStats, "timePlayed.displayName").safeObject}
+                  {t(playerSegment, "stats.timePlayed.displayName").safeObject}
                 </div>
-                <div className="statValueCS">
-                  {t(playerStats, "timePlayed.displayValue").safeObject}
-                </div>
-              </Col>
-              <Col className="cardMide p-0 ml-2 mt-auto mb-auto">
-                <div className="statTitle">
-                  {t(playerStats, "wins.displayName").safeObject}
-                  <div className="ml-auto percent">
-                    {t(playerStats, "wins.percentile").safeObject}%
-                  </div>
-                </div>
-                <div className="statValueCS">
-                  {t(playerStats, "wins.displayValue").safeObject}
-                </div>
-              </Col>
-              <Col className="cardMide p-0 ml-2 mt-auto mb-auto">
-                <div className="statTitle">
-                  {t(playerStats, "losses.displayName").safeObject}
-                  <div className="ml-auto percent">
-                    {t(playerStats, "losses.percentile").safeObject}%
-                  </div>
-                </div>
-                <div className="statValueCS">
-                  {t(playerStats, "losses.displayValue").safeObject}
+                <div className="statValue">
+                  {t(playerSegment, "stats.timePlayed.displayValue").safeObject}
                 </div>
               </Col>
             </Row>
-            <Row className="col-lg-10 ml-auto mr-auto mt-4 typeTitleCs">
-              <div className="dotCs mt-auto mb-auto mr-2"></div>
+            <Row className="col-lg-10 ml-auto mr-auto mt-4 typeTitle">
+              <div className="dot mt-auto mb-auto mr-2"></div>
               {playerSegment.type.toUpperCase()}
             </Row>
             <Row className="col-lg-10 ml-auto mr-auto p-0 botte">
               {data.map((item, index) =>
-                index === 0 || index === 19 || index === 22 ? null : (
+                index === 0 ? null : (
                   <CardStats
                     statsColor="whitesmoke"
-                    colored="#30c5ff"
+                    colored="orange"
                     key={index}
                     title={item.displayName}
                     value={item.displayValue}
@@ -171,10 +149,10 @@ class TrackerCSGO extends Component {
 
 const mapStateToProps = state => {
   return {
-    player: state.csgo.csgoPlayer,
-    isLoading: state.csgo.isLoading,
-    error: state.csgo.error
+    player: state.division.divisionPlayer,
+    isLoading: state.division.isLoading,
+    error: state.division.error
   };
 };
 
-export default connect(mapStateToProps)(TrackerCSGO);
+export default connect(mapStateToProps)(TrackerDivision);

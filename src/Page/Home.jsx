@@ -32,9 +32,9 @@ class Home extends Component {
     let data = Object.values(category);
     return (
       <div className="home">
-        <div className="news col-lg-11"></div>
+        <div className="news col-lg-12"></div>
         {isLoading === false ? (
-          <div className="cardContainer col-lg-11 mb-3">
+          <div className="cardContainer col-lg-11 mb-3 pb-3">
             {data.map((item, index) => (
               <GameCard key={index} data={item} />
             ))}

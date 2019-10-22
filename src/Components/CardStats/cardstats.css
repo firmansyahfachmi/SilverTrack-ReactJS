@@ -1,18 +1,19 @@
 .cardStats {
-  background-color: #242831;
-  width: 172px;
+  background-color: #353943;
+  width: 178px;
   height: 100px;
-  margin: 0px 5px 0px 5px;
+  margin-bottom: 10px;
 }
 
 .cardTitle {
   color: whitesmoke;
-  padding: 5px 8px 0px 8px;
-  font-size: 14px;
+  padding: 2px 8px 2px 8px;
+  font-size: 12px;
+  background-color: #1e2129;
+  display: flex;
 }
 
 .cardValue {
-  color: #30c5ff;
   margin: auto;
   width: 100%;
   font-size: 24px;

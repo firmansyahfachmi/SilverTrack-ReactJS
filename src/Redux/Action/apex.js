@@ -6,13 +6,13 @@ const headers = {
   }
 };
 
-// 76561198149145370
+// Daltoosh
 
-export const getCsgoPlayer = search => {
+export const getApexPlayer = search => {
   return {
-    type: "GET_CSGO_PLAYER",
+    type: "GET_APEX_PLAYER",
     payload: Axios.get(
-      `https://public-api.tracker.gg/v2/csgo/standard/profile/steam/${search}`,
+      `https://public-api.tracker.gg/v2/apex/standard/profile/psn/${search}`,
       headers
     )
   };

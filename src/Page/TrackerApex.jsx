@@ -3,15 +3,17 @@ import { Row, Col, Spinner } from "react-bootstrap";
 
 import t from "typy";
 
-import "./trackercsgo.css";
+import "./trackerapex.css";
 
 import { connect } from "react-redux";
-import { getCsgoPlayer } from "../Redux/Action/csgo";
+import { getApexPlayer } from "../Redux/Action/apex";
 
 import CardStats from "../Components/CardStats/CardStats";
+import CardLegend from "../Components/CardLegend/cardLegend";
+
 import Character from "../Assets/character.png";
 
-class TrackerCSGO extends Component {
+class TrackerApex extends Component {
   constructor() {
     super();
     this.state = {
@@ -19,6 +21,7 @@ class TrackerCSGO extends Component {
       playerPlatform: {},
       playerStats: {},
       search: "",
+      playerSegmentAll: {},
       character: false
     };
   }
@@ -33,13 +36,15 @@ class TrackerCSGO extends Component {
     this.setState({ character: true });
     let search = this.state.search;
     this.props
-      .dispatch(getCsgoPlayer(search))
+      .dispatch(getApexPlayer(search))
       .then(() => {
         let data = { ...this.props.player.segments }[0];
+        let data2 = this.props.player.segments;
         this.setState({
           playerSegment: data,
           playerPlatform: this.props.player.platformInfo,
-          playerStats: data.stats
+          playerStats: data.stats,
+          playerSegmentAll: data2
         });
       })
       .catch(() => {
@@ -47,7 +52,8 @@ class TrackerCSGO extends Component {
         this.setState({
           playerSegment: {},
           playerPlatform: {},
-          playerStats: {}
+          playerStats: {},
+          playerSegmentAll: {}
         });
       });
   };
@@ -57,25 +63,25 @@ class TrackerCSGO extends Component {
       playerSegment,
       playerPlatform,
       playerStats,
+      playerSegmentAll,
       character
     } = this.state;
-
     const data = Object.values(playerStats);
     return (
-      <div className="csgo">
+      <div className="apex">
         <Row className="col-lg-10 m-auto tope">
           <Col className="col-lg-3">
             <img
-              src="http://www.requitix.io/mypics/max/9/92461_csgo-logo-png.png"
-              alt="CSGO Logo"
-              width="200px"
+              src="https://logodownload.org/wp-content/uploads/2019/02/apex-legends-logo-9.png"
+              alt="Apex Legends Logo"
+              width="100px"
             />
           </Col>
           <Col className="col-lg-6">
             <input
               type="text"
-              placeholder="Search player"
-              className="searchCsgo col-lg-12"
+              placeholder="Search Player"
+              className="searchApex col-lg-12"
               onChange={this.handleChange}
               onKeyPress={e => {
                 if (e.key === "Enter") {
@@ -110,50 +116,34 @@ class TrackerCSGO extends Component {
                   />
                 </div>
               </Col>
-              <Col className="col-lg-5 name p-0">
+              <Col className="col-lg-8 name p-0">
                 {t(playerPlatform, "platformUserHandle").safeObject}
               </Col>
               <Col className="cardMide p-0 mt-auto mb-auto">
                 <div className="statTitle">
-                  {t(playerStats, "timePlayed.displayName").safeObject}
+                  {
+                    t(playerSegment, "stats.matchesPlayed.displayName")
+                      .safeObject
+                  }
                 </div>
-                <div className="statValueCS">
-                  {t(playerStats, "timePlayed.displayValue").safeObject}
-                </div>
-              </Col>
-              <Col className="cardMide p-0 ml-2 mt-auto mb-auto">
-                <div className="statTitle">
-                  {t(playerStats, "wins.displayName").safeObject}
-                  <div className="ml-auto percent">
-                    {t(playerStats, "wins.percentile").safeObject}%
-                  </div>
-                </div>
-                <div className="statValueCS">
-                  {t(playerStats, "wins.displayValue").safeObject}
-                </div>
-              </Col>
-              <Col className="cardMide p-0 ml-2 mt-auto mb-auto">
-                <div className="statTitle">
-                  {t(playerStats, "losses.displayName").safeObject}
-                  <div className="ml-auto percent">
-                    {t(playerStats, "losses.percentile").safeObject}%
-                  </div>
-                </div>
-                <div className="statValueCS">
-                  {t(playerStats, "losses.displayValue").safeObject}
+                <div className="statValue">
+                  {
+                    t(playerSegment, "stats.matchesPlayed.displayValue")
+                      .safeObject
+                  }
                 </div>
               </Col>
             </Row>
-            <Row className="col-lg-10 ml-auto mr-auto mt-4 typeTitleCs">
-              <div className="dotCs mt-auto mb-auto mr-2"></div>
+            <Row className="col-lg-10 ml-auto mr-auto mt-4 typeTitleApex">
+              <div className="dotApex mt-auto mb-auto mr-2"></div>
               {playerSegment.type.toUpperCase()}
             </Row>
             <Row className="col-lg-10 ml-auto mr-auto p-0 botte">
               {data.map((item, index) =>
-                index === 0 || index === 19 || index === 22 ? null : (
+                index === 6 ? null : (
                   <CardStats
                     statsColor="whitesmoke"
-                    colored="#30c5ff"
+                    colored="#ed2828"
                     key={index}
                     title={item.displayName}
                     value={item.displayValue}
@@ -162,6 +152,15 @@ class TrackerCSGO extends Component {
                 )
               )}
             </Row>
+            <Row className="col-lg-10 ml-auto mr-auto mt-2 mb-2 typeTitleApex">
+              <div className="dotApex mt-auto mb-auto mr-2"></div>
+              {playerSegmentAll[1].type.toUpperCase()}
+            </Row>
+            {playerSegmentAll.map((item, index) =>
+              index === 0 || index === 4 ? null : (
+                <CardLegend key={index} data={item} />
+              )
+            )}
           </>
         )}
       </div>
@@ -171,10 +170,9 @@ class TrackerCSGO extends Component {
 
 const mapStateToProps = state => {
   return {
-    player: state.csgo.csgoPlayer,
-    isLoading: state.csgo.isLoading,
-    error: state.csgo.error
+    player: state.apex.apexPlayer,
+    isLoading: state.apex.isLoading
   };
 };
 
-export default connect(mapStateToProps)(TrackerCSGO);
+export default connect(mapStateToProps)(TrackerApex);

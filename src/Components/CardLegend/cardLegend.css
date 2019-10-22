@@ -1,0 +1,29 @@
+.cardLegend {
+  background-color: #242831;
+  height: auto;
+  display: flex;
+  border-bottom: 3px solid #a71919;
+}
+
+.outerImg {
+  height: 100%;
+}
+
+.ImgContainer {
+  height: 180px;
+}
+
+.legendName {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.statContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.imgLegend {
+  object-fit: cover;
+  width: 100%;
+}

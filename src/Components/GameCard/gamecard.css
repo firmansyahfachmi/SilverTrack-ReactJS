@@ -7,7 +7,7 @@
 }
 
 .gimg {
-  height: 220px;
+  height: 240px;
   background-color: #353943;
   margin: auto;
   width: 185px;
@@ -23,7 +23,7 @@
 }
 
 .catimage {
-  height: 220px;
+  height: 240px;
   width: 100%;
   object-fit: cover;
 }

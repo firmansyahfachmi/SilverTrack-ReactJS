@@ -10,6 +10,8 @@ import Login from "./Page/Login";
 import Register from "./Page/Register";
 import Profile from "./Page/Profile";
 import Csgo from "./Page/TrackerCSGO";
+import Division from "./Page/TrackerDivision";
+import Apex from "./Page/TrackerApex";
 
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
@@ -25,6 +27,8 @@ class App extends Component {
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
           <Route path="/csgo" component={Csgo} />
+          <Route path="/division2" component={Division} />
+          <Route path="/apex" component={Apex} />
 
           <Footer />
         </Router>
