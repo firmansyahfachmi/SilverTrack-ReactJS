@@ -48,7 +48,13 @@ class Profile extends Component {
           <>
             <Row className="profileTitle col-lg-8 mt-4">My Profile</Row>
             <Row className="profileContainer col-lg-8">
-              <Col className="img col-lg-3"></Col>
+              <Col className="img col-lg-3 p-0">
+                <img
+                  src={user.photo}
+                  alt="profileimage"
+                  className="profileImg m-auto"
+                />
+              </Col>
               <Col className="desc col-lg-8">
                 <div className="nameTitle">{user.username}</div>
                 <div className="emailSub">{user.email}</div>

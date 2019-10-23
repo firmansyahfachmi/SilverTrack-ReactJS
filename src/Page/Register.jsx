@@ -10,7 +10,13 @@ class Register extends Component {
   constructor() {
     super();
     this.state = {
-      formData: {},
+      formData: {
+        username: "",
+        email: "",
+        photo:
+          "https://user-images.githubusercontent.com/52324743/67379447-25953f80-f5b3-11e9-9f7f-1257b1530fc6.png",
+        password: ""
+      },
       rePassword: ""
     };
   }
@@ -31,7 +37,6 @@ class Register extends Component {
 
   handleSubmit = () => {
     const { formData, rePassword } = this.state;
-    console.log("s", formData);
     if (
       formData.username &&
       formData.email &&
@@ -82,7 +87,8 @@ class Register extends Component {
           .createUserWithEmailAndPassword(formData.email, formData.password)
           .then(async ({ user }) => {
             await firebase.auth().currentUser.updateProfile({
-              displayName: formData.username
+              displayName: formData.username,
+              photoURL: formData.photo
             });
             await firebase
               .database()
@@ -90,7 +96,8 @@ class Register extends Component {
               .set({
                 uid: user.uid,
                 username: formData.username,
-                email: formData.email
+                email: formData.email,
+                photo: formData.photo
               })
               .then(() => {
                 Swal.fire({

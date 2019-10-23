@@ -39,6 +39,11 @@
   justify-content: center;
 }
 
+.profileImg {
+  object-fit: cover;
+  width: 90%;
+}
+
 .sub {
   text-align: center;
   font-size: 22px;
@@ -148,8 +153,12 @@
 }
 
 .img {
-  height: 200px;
+  height: 215px;
   background-color: #353943;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .desc {
