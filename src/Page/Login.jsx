@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 import firebase from "firebase";
 import "./page.css";
@@ -33,8 +34,16 @@ class Login extends Component {
         .then(result => {
           localStorage.setItem("userId", result.user.uid);
           localStorage.setItem("username", result.user.displayName);
-          alert("Login Success");
-          window.location = "/";
+          Swal.fire({
+            title: "Login Success",
+            toast: true,
+            position: "top-end",
+            type: "success",
+            showConfirmButton: false,
+            timer: 2000
+          }).then(() => {
+            window.location = `/`;
+          });
         });
     }
   };

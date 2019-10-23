@@ -11,18 +11,23 @@
 
 .ImgContainer {
   height: 180px;
+
+  background-color: #31364290;
 }
 
 .legendName {
   text-align: center;
   color: whitesmoke;
   font-weight: 500;
+
+  background-color: #1d2027;
 }
 
 .statContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .imgLegend {
   object-fit: cover;
   width: 100%;

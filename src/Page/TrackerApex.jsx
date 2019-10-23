@@ -59,6 +59,7 @@ class TrackerApex extends Component {
   };
 
   render() {
+    console.log("t", this.props.player);
     const {
       playerSegment,
       playerPlatform,
@@ -152,7 +153,7 @@ class TrackerApex extends Component {
                 )
               )}
             </Row>
-            <Row className="col-lg-10 ml-auto mr-auto mt-2 mb-2 typeTitleApex">
+            <Row className="col-lg-10 ml-auto mr-auto mt-3 mb-2 typeTitleApex">
               <div className="dotApex mt-auto mb-auto mr-2"></div>
               {playerSegmentAll[1].type.toUpperCase()}
             </Row>

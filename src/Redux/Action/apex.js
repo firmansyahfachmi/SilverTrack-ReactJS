@@ -2,7 +2,7 @@ import Axios from "axios";
 
 const headers = {
   headers: {
-    "TRN-Api-Key": "a96baa27-977f-4689-97da-217ef7a5bf6c"
+    "TRN-Api-Key": process.env.REACT_APP_API_KEY
   }
 };
 

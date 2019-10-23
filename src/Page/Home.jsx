@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Row } from "react-bootstrap";
 
 import "./page.css";
 
@@ -32,7 +32,14 @@ class Home extends Component {
     let data = Object.values(category);
     return (
       <div className="home">
-        <div className="news col-lg-12"></div>
+        <div className="news col-lg-12 p-0">
+          <Row>
+            <div className="landing ml-auto mr-auto">RAISE YOUR PERFORMA</div>
+          </Row>
+          <Row className="mt-2">
+            <div className=" m-auto sub">Tracking over 100 million players</div>
+          </Row>
+        </div>
         {isLoading === false ? (
           <div className="cardContainer col-lg-11 mb-3 pb-3">
             {data.map((item, index) => (

@@ -8,10 +8,15 @@ const CardLegend = props => {
   let metadata = props.data.metadata;
   let stats = Object.values(props.data.stats);
 
-  console.log("ps", stats);
   return (
     <Fragment>
-      <div className="ml-auto mr-auto cardLegend mb-3 col-lg-10 p-3">
+      <div
+        className="ml-auto mr-auto cardLegend mb-3 col-lg-10 p-3"
+        style={{
+          backgroundImage: `url(${metadata.bgImageUrl})`,
+          backgroundSize: "cover"
+        }}
+      >
         <div className="outerImg col-lg-2 p-0">
           <div className="ImgContainer col-lg-12">
             <img

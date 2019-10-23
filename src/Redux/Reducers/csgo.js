@@ -2,8 +2,7 @@ const initialState = {
   csgoPlayer: [],
   isLoading: false,
   isFulfilled: false,
-  isRejected: false,
-  error: ""
+  isRejected: false
 };
 
 const csgo = (state = initialState, action) => {
@@ -19,8 +18,7 @@ const csgo = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        isRejected: true,
-        error: action.payload.response.data.errors[0].message
+        isRejected: true
       };
     case "GET_CSGO_PLAYER_FULFILLED":
       return {
