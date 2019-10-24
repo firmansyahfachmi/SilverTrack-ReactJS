@@ -30,3 +30,14 @@
   margin: auto;
   text-decoration: none;
 }
+
+.profileLink {
+  color: #30c5ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.profileLink:hover {
+  text-decoration: none;
+  color: #2baee2;
+}

@@ -31,13 +31,9 @@ class Header extends Component {
                   </Link>
                 </>
               ) : (
-                <Nav.Link
-                  href="/profile"
-                  className="mr-4"
-                  style={{ color: "#30c5ff", fontWeight: "500" }}
-                >
+                <Link to="/profile" className="mr-4 profileLink">
                   {localStorage.getItem("username")}
-                </Nav.Link>
+                </Link>
               )}
             </Nav>
           </Navbar.Collapse>
