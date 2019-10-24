@@ -22,7 +22,11 @@ class TrackerApex extends Component {
       playerStats: {},
       search: "",
       playerSegmentAll: {},
-      character: false
+      character: false,
+      platform: "",
+      platformColorPs: "",
+      platformColorXbox: "",
+      platformColorOrigin: ""
     };
   }
 
@@ -33,10 +37,11 @@ class TrackerApex extends Component {
   };
 
   searching = async () => {
+    const { platform } = this.state;
     this.setState({ character: true });
     let search = this.state.search;
     this.props
-      .dispatch(getApexPlayer(search))
+      .dispatch(getApexPlayer(platform, search))
       .then(() => {
         let data = { ...this.props.player.segments }[0];
         let data2 = this.props.player.segments;
@@ -58,14 +63,45 @@ class TrackerApex extends Component {
       });
   };
 
+  changePlatform = data => {
+    let color = "";
+    if (data === "psn") {
+      color = "rgb(2, 100, 228)";
+      this.setState({
+        platformColorPs: color,
+        platformColorXbox: "#50566430",
+        platformColorOrigin: "#50566430"
+      });
+    } else if (data === "xbl") {
+      color = "rgb(40, 141, 36)";
+      this.setState({
+        platformColorPs: "#50566430",
+        platformColorXbox: color,
+        platformColorOrigin: "#50566430"
+      });
+    } else if (data === "origin") {
+      color = "rgb(241, 90, 34)";
+      this.setState({
+        platformColorPs: "#50566430",
+        platformColorXbox: "#50566430",
+        platformColorOrigin: color
+      });
+    }
+    this.setState({
+      platform: data
+    });
+  };
+
   render() {
-    console.log("t", this.props.player);
     const {
       playerSegment,
       playerPlatform,
       playerStats,
       playerSegmentAll,
-      character
+      character,
+      platformColorPs,
+      platformColorXbox,
+      platformColorOrigin
     } = this.state;
     const data = Object.values(playerStats);
     return (
@@ -77,6 +113,35 @@ class TrackerApex extends Component {
               alt="Apex Legends Logo"
               width="100px"
             />
+          </Col>
+          <Col className="butPlatform">
+            <div
+              className="platButton platPs"
+              onClick={() => this.changePlatform("psn")}
+              style={{
+                backgroundColor: platformColorPs
+              }}
+            >
+              <i className="fab fa-playstation"></i>
+            </div>
+            <div
+              className="platButton platXbox"
+              onClick={() => this.changePlatform("xbl")}
+              style={{ backgroundColor: platformColorXbox }}
+            >
+              <i className="fab fa-xbox"></i>
+            </div>
+            <div
+              className="platButton platOrigin"
+              onClick={() => this.changePlatform("origin")}
+              style={{ backgroundColor: platformColorOrigin }}
+            >
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/origin-1-logo-black-and-white.png"
+                alt="origin"
+                width="20px"
+              />
+            </div>
           </Col>
           <Col className="col-lg-6">
             <input

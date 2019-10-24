@@ -19,7 +19,11 @@ class TrackerDivision extends Component {
       playerPlatform: {},
       playerStats: {},
       search: "",
-      character: false
+      character: false,
+      platform: "",
+      platformColorPs: "",
+      platformColorXbox: "",
+      platformColorUplay: ""
     };
   }
 
@@ -30,10 +34,11 @@ class TrackerDivision extends Component {
   };
 
   searching = async () => {
+    const { platform } = this.state;
     this.setState({ character: true });
     let search = this.state.search;
     this.props
-      .dispatch(getDivisionPlayer(search))
+      .dispatch(getDivisionPlayer(platform, search))
       .then(() => {
         let data = { ...this.props.player.segments }[0];
         this.setState({
@@ -52,15 +57,46 @@ class TrackerDivision extends Component {
       });
   };
 
+  changePlatform = data => {
+    let color = "";
+    if (data === "psn") {
+      color = "rgb(2, 100, 228)";
+      this.setState({
+        platformColorPs: color,
+        platformColorXbox: "#50566430",
+        platformColorUplay: "#50566430"
+      });
+    } else if (data === "xbl") {
+      color = "rgb(40, 141, 36)";
+      this.setState({
+        platformColorPs: "#50566430",
+        platformColorXbox: color,
+        platformColorUplay: "#50566430"
+      });
+    } else if (data === "uplay") {
+      color = "rgb(2, 171, 228)";
+      this.setState({
+        platformColorPs: "#50566430",
+        platformColorXbox: "#50566430",
+        platformColorUplay: color
+      });
+    }
+    this.setState({
+      platform: data
+    });
+  };
+
   render() {
     const {
       playerSegment,
       playerPlatform,
       playerStats,
-      character
+      character,
+      platformColorPs,
+      platformColorXbox,
+      platformColorUplay
     } = this.state;
     const data = Object.values(playerStats);
-
     return (
       <div className="division">
         <Row className="col-lg-10 m-auto tope">
@@ -70,6 +106,35 @@ class TrackerDivision extends Component {
               alt="DIVISION Logo"
               width="200px"
             />
+          </Col>
+          <Col className="butPlatform">
+            <div
+              className="platButton platPs"
+              onClick={() => this.changePlatform("psn")}
+              style={{
+                backgroundColor: platformColorPs
+              }}
+            >
+              <i className="fab fa-playstation"></i>
+            </div>
+            <div
+              className="platButton platXbox"
+              onClick={() => this.changePlatform("xbl")}
+              style={{ backgroundColor: platformColorXbox }}
+            >
+              <i className="fab fa-xbox"></i>
+            </div>
+            <div
+              className="platButton platUbisoft"
+              onClick={() => this.changePlatform("uplay")}
+              style={{ backgroundColor: platformColorUplay }}
+            >
+              <img
+                src="https://ubistatic2-a.akamaihd.net/legal_portal/prod/images_new/ubilogo.png"
+                alt="uplay"
+                width="35px"
+              />
+            </div>
           </Col>
           <Col className="col-lg-6">
             <input

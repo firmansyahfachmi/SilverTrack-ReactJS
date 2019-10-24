@@ -23,7 +23,7 @@ class Header extends Component {
             <Nav className="ml-auto mr-5">
               {localStorage.getItem("userId") === null ? (
                 <>
-                  <Link to="/login" className="mr-4">
+                  <Link to="/login" className="mr-4 loginLink">
                     Login
                   </Link>
                   <Link to="/register">

@@ -8,11 +8,11 @@ const headers = {
 
 // Daltoosh
 
-export const getApexPlayer = search => {
+export const getApexPlayer = (platform, search) => {
   return {
     type: "GET_APEX_PLAYER",
     payload: Axios.get(
-      `https://public-api.tracker.gg/v2/apex/standard/profile/psn/${search}`,
+      `https://public-api.tracker.gg/v2/apex/standard/profile/${platform}/${search}`,
       headers
     )
   };

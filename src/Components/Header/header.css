@@ -18,3 +18,15 @@
   background-color: #2ca2d1;
   border: none;
 }
+
+.loginLink {
+  color: silver;
+  margin: auto;
+  text-decoration: none;
+}
+
+.loginLink:hover {
+  color: grey;
+  margin: auto;
+  text-decoration: none;
+}

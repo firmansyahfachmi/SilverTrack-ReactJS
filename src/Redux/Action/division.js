@@ -8,11 +8,11 @@ const headers = {
 
 // Solivictus
 
-export const getDivisionPlayer = search => {
+export const getDivisionPlayer = (platform, search) => {
   return {
     type: "GET_DIVISION_PLAYER",
     payload: Axios.get(
-      `https://public-api.tracker.gg/v2/division-2/standard/profile/uplay/${search}`,
+      `https://public-api.tracker.gg/v2/division-2/standard/profile/${platform}/${search}`,
       headers
     )
   };

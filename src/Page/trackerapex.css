@@ -123,4 +123,39 @@
   border-radius: 50px;
 }
 
+.butPlatform {
+  display: flex;
+  justify-content: space-between;
+  border-left: 1px solid grey;
+}
+
+.platButton {
+  height: 50px;
+  background-color: #50566430;
+  flex: 1;
+  margin-right: 2px;
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+.platButton:hover {
+  cursor: pointer;
+}
+
+.platPs:hover {
+  background-color: rgb(2, 100, 228);
+}
+
+.platXbox:hover {
+  background-color: rgb(40, 141, 36);
+}
+
+.platOrigin:hover {
+  background-color: rgb(241, 90, 34);
+}
+
 /* TRACKER APEX STYLES END ////////////////////////////////////////////////////////// */
