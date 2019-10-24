@@ -23,9 +23,9 @@ class Header extends Component {
             <Nav className="ml-auto mr-5">
               {localStorage.getItem("userId") === null ? (
                 <>
-                  <Nav.Link href="/login" className="mr-4">
+                  <Link to="/login" className="mr-4">
                     Login
-                  </Nav.Link>
+                  </Link>
                   <Link to="/register">
                     <Button className="butRegister mb-0">Register</Button>
                   </Link>
