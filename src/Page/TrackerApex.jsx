@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, Spinner } from "react-bootstrap";
 
 import t from "typy";
+import Swal from "sweetalert2";
 
 import "./trackerapex.css";
 
@@ -38,29 +39,41 @@ class TrackerApex extends Component {
 
   searching = async () => {
     const { platform } = this.state;
-    this.setState({ character: true });
-    let search = this.state.search;
-    this.props
-      .dispatch(getApexPlayer(platform, search))
-      .then(() => {
-        let data = { ...this.props.player.segments }[0];
-        let data2 = this.props.player.segments;
-        this.setState({
-          playerSegment: data,
-          playerPlatform: this.props.player.platformInfo,
-          playerStats: data.stats,
-          playerSegmentAll: data2
-        });
-      })
-      .catch(() => {
-        console.log("alert", this.props.error);
-        this.setState({
-          playerSegment: {},
-          playerPlatform: {},
-          playerStats: {},
-          playerSegmentAll: {}
-        });
+    if (!platform) {
+      Swal.fire({
+        title: "Choose the platform!",
+        toast: true,
+        position: "top-end",
+        type: "warning",
+        showConfirmButton: false,
+        timer: 1500
       });
+    } else {
+      this.setState({ character: true });
+      let search = this.state.search;
+      this.props
+        .dispatch(getApexPlayer(platform, search))
+        .then(() => {
+          let data = { ...this.props.player.segments }[0];
+          let data2 = this.props.player.segments;
+          this.setState({
+            playerSegment: data,
+            playerPlatform: this.props.player.platformInfo,
+            playerStats: data.stats,
+            playerSegmentAll: data2
+          });
+        })
+        .catch(() => {
+          console.log("alert", this.props.error);
+          this.setState({
+            playerSegment: {},
+            playerPlatform: {},
+            playerStats: {},
+            playerSegmentAll: {},
+            platform: ""
+          });
+        });
+    }
   };
 
   changePlatform = data => {
