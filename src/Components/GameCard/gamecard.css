@@ -27,3 +27,30 @@
   width: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 1000px) {
+  .gcard {
+    margin-top: 30px;
+    height: auto;
+    width: 10px;
+  }
+
+  .gimg {
+    height: auto;
+    background-color: #353943;
+    width: 155px;
+    margin: auto;
+  }
+
+  .catimage {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .gtitle {
+    font-size: 0.8em;
+    width: 100px;
+  }
+}
