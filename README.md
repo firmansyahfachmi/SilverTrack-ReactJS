@@ -25,27 +25,27 @@ SilverTracker is website for track the player stats from any games
  
 ## Screenshot
 <p align="center">
-    <!--<span>
-      <img src="https://user-images.githubusercontent.com/52324743/67119954-73582380-f212-11e9-97f3-040ab60a6287.jpg" width="90%" />
+    <span>
+      <img src="https://user-images.githubusercontent.com/52324743/67556797-04148f00-f73e-11e9-8b92-9e26ed22ddd2.jpg" width="90%" />
     </span><br/><br/>
     <span>
-     <img src="https://user-images.githubusercontent.com/52324743/67120000-8e2a9800-f212-11e9-8610-462e00ac2f1a.jpg" width="90%" />       </span><br/><br/>
+     <img src="https://user-images.githubusercontent.com/52324743/67556903-30c8a680-f73e-11e9-9e18-e0b4221db77b.jpg" width="90%" />       </span><br/><br/>
   <span>
-    <img src="https://user-images.githubusercontent.com/52324743/67120296-36406100-f213-11e9-98c7-6b3d0d2848a9.jpg" width="90%" />
+    <img src="https://user-images.githubusercontent.com/52324743/67556926-3faf5900-f73e-11e9-8244-978bfbd72927.jpg" width="90%" />
   </span><br/><br/>
   <span>
-    <img src="https://user-images.githubusercontent.com/52324743/67120322-45bfaa00-f213-11e9-9549-cb06bdd4a7e5.jpg" width="90%" />
+    <img src="https://user-images.githubusercontent.com/52324743/67556983-58b80a00-f73e-11e9-9f37-27e8ddcad8dc.jpg" width="90%" />
   </span><br/><br/>
   <span>
-    <img src="https://user-images.githubusercontent.com/52324743/67120498-9c2ce880-f213-11e9-8741-1ea9a399349e.jpg" width="90%" />
+    <img src="https://user-images.githubusercontent.com/52324743/67557004-67062600-f73e-11e9-8628-95d3179b33db.jpg" width="90%" />
   </span><br/><br/>
   <span>
-    <img src="https://user-images.githubusercontent.com/52324743/67120615-d72f1c00-f213-11e9-8020-427d22396627.jpg" width="90%" />
+    <img src="https://user-images.githubusercontent.com/52324743/67557038-78e7c900-f73e-11e9-8836-7d2dbf250de6.jpg" width="90%" />
   </span><br/><br/>
   
   <span>
-    <img src="https://user-images.githubusercontent.com/52324743/67120714-0a71ab00-f214-11e9-88b5-b1be644787aa.jpg" width="90%" />
-  </span>-->
+    <img src="https://user-images.githubusercontent.com/52324743/67557067-8b620280-f73e-11e9-9767-d0884a14965f.jpg" width="90%" />
+  </span>
   </p>
 
 ## License
