@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">SilverTracker - ReactJS</h1><br /><br />
 
-## Available Scripts
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/52324743/67556566-98cabd00-f73d-11e9-915d-d645da6ec1d4.png" width="450"/>
+</p>
 
-In the project directory, you can run:
+<br/><br/>
 
-### `npm start`
+<a href="#">
+  <img src="https://img.shields.io/badge/ReactJS-16.10-blue.svg?style=flat-square" alt="npm version">
+</a>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Introduction
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+SilverTracker is website for track the player stats from any games
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
+  - NPM (Node Package Manager)
+  - React-JS
+  - Firebase
+ 
+## Screenshot
+<p align="center">
+    <!--<span>
+      <img src="https://user-images.githubusercontent.com/52324743/67119954-73582380-f212-11e9-97f3-040ab60a6287.jpg" width="90%" />
+    </span><br/><br/>
+    <span>
+     <img src="https://user-images.githubusercontent.com/52324743/67120000-8e2a9800-f212-11e9-8610-462e00ac2f1a.jpg" width="90%" />       </span><br/><br/>
+  <span>
+    <img src="https://user-images.githubusercontent.com/52324743/67120296-36406100-f213-11e9-98c7-6b3d0d2848a9.jpg" width="90%" />
+  </span><br/><br/>
+  <span>
+    <img src="https://user-images.githubusercontent.com/52324743/67120322-45bfaa00-f213-11e9-9549-cb06bdd4a7e5.jpg" width="90%" />
+  </span><br/><br/>
+  <span>
+    <img src="https://user-images.githubusercontent.com/52324743/67120498-9c2ce880-f213-11e9-8741-1ea9a399349e.jpg" width="90%" />
+  </span><br/><br/>
+  <span>
+    <img src="https://user-images.githubusercontent.com/52324743/67120615-d72f1c00-f213-11e9-8020-427d22396627.jpg" width="90%" />
+  </span><br/><br/>
+  
+  <span>
+    <img src="https://user-images.githubusercontent.com/52324743/67120714-0a71ab00-f214-11e9-88b5-b1be644787aa.jpg" width="90%" />
+  </span>-->
+  </p>
 
-### `npm run build`
+## License
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Mohammad Fachmi Firmansyah - &copy; 2019
