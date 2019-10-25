@@ -1,4 +1,4 @@
-<h1 align="center">SilverTracker - ReactJS</h1><br /><br />
+<h1 align="center">SilverTracker - ReactJS</h1><br /><br /><br />
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/52324743/67556566-98cabd00-f73d-11e9-915d-d645da6ec1d4.png" width="450"/>
@@ -8,6 +8,9 @@
 
 <a href="#">
   <img src="https://img.shields.io/badge/ReactJS-16.10-blue.svg?style=flat-square" alt="npm version">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/Firebase-7.2.0-yellow.svg?style=flat-square" alt="npm version">
 </a>
 
 ## Introduction
